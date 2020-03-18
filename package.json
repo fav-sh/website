@@ -1,0 +1,41 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Fav Bookmark Manager Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development parcel src/index.html -p 3000",
+    "build": "NODE_ENV=production parcel build src/index.html --no-source-maps",
+    "serve": "serve -s dist",
+    "format": "prettier --write './src/*.js'",
+    "clean": "rm -rf .cache dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fav-sh/website.git"
+  },
+  "keywords": [
+    "fav",
+    "fav.sh"
+  ],
+  "author": "Sunny Golovine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fav-sh/website/issues"
+  },
+  "homepage": "https://github.com/fav-sh/website#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "prettier": "^1.19.1",
+    "serve": "^11.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "react": "^16.13.0",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-dom": "^16.13.0",
+    "react-headroom": "^3.0.0",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.0.1"
+  }
+}
