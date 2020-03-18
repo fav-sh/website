@@ -1,13 +1,11 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import Headroom from 'react-headroom'
+import { data } from './data'
+import styled from 'styled-components'
 
-const brandHref = '#'
-const chromeHref = '#'
-const firefoxHref = '#'
-const githubHref = '#'
 const brand = require('/assets/brandImage.png')
-const headerImage = require('/assets/headerImage.png')
+const { brandHref, firefoxHref, chromeHref, githubHref } = data
 
 export const PageWrapper = ({ children }) => {
   const renderHeader = () => {
@@ -30,9 +28,9 @@ export const PageWrapper = ({ children }) => {
             className="justify-content-end"
           >
             <Nav>
-              <Nav.Link href={firefoxHref}>Firefox Version</Nav.Link>
-              <Nav.Link href={chromeHref}>Chrome Version</Nav.Link>
-              <Nav.Link href={githubHref}>Github</Nav.Link>
+              <CustomNavLink href={firefoxHref}>Firefox Version</CustomNavLink>
+              <CustomNavLink href={chromeHref}>Chrome Version</CustomNavLink>
+              <CustomNavLink href={githubHref}>Github</CustomNavLink>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -47,3 +45,10 @@ export const PageWrapper = ({ children }) => {
     </div>
   )
 }
+
+const CustomNavLink = styled(Nav.Link)`
+  color: #eceff1;
+  :hover {
+    color: #f4511e;
+  }
+`

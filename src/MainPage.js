@@ -2,6 +2,9 @@ import React from 'react'
 import { PageWrapper } from './PageWrapper'
 import { Jumbotron, Button, Row, Col, Image } from 'react-bootstrap'
 import styled from 'styled-components'
+import { data } from './data'
+
+const { chromeHref, firefoxHref } = data
 
 // Images
 // https://imgur.com/a/sRGqnup
@@ -23,10 +26,10 @@ const MainPage = () => {
           Chrome and syncs your bookmarks with Github Gist.
         </p>
         <p>
-          <CustomButton variant="outline-light">
+          <CustomButton href={chromeHref} variant="outline-light">
             Get Fav for Chrome
           </CustomButton>
-          <CustomButton variant="outline-light">
+          <CustomButton href={firefoxHref} variant="outline-light">
             Get Fav for Firefox
           </CustomButton>
         </p>
