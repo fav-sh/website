@@ -26,8 +26,8 @@ const MainPage = () => {
           Chrome and syncs your bookmarks with Github Gist.
         </p>
         <p>
-          <CustomButton href={chromeHref} variant="outline-light">
-            Get Fav for Chrome
+          <CustomButton disabled href={chromeHref} variant="outline-light">
+            Get Fav for Chrome (Coming Soon!)
           </CustomButton>
           <CustomButton href={firefoxHref} variant="outline-light">
             Get Fav for Firefox

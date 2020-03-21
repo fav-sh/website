@@ -29,7 +29,9 @@ export const PageWrapper = ({ children }) => {
           >
             <Nav>
               <CustomNavLink href={firefoxHref}>Firefox Version</CustomNavLink>
-              <CustomNavLink href={chromeHref}>Chrome Version</CustomNavLink>
+              <CustomNavLink disabled href={chromeHref}>
+                Chrome Version (Coming Soon)
+              </CustomNavLink>
               <CustomNavLink href={githubHref}>Github</CustomNavLink>
             </Nav>
           </Navbar.Collapse>
