@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gatsby develop"
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
   },
   "repository": {
     "type": "git",
