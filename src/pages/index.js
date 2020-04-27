@@ -12,9 +12,9 @@ export default () => {
       <GlobalStyle />
       <OuterContainer>
         <Container>
-          <Left>
+          <div>
             <ImageWithBorder fluid={screenshot} />
-          </Left>
+          </div>
           <Right>
             <HeaderContainer>
               <HeaderImage fluid={logo} />
@@ -24,25 +24,23 @@ export default () => {
               Fav is an open source bookmark manager that works with Firefox and
               Chrome and syncs your bookmarks with Github Gist.
             </p>
-            <FeatureContainer>
-              <h3>Quickly Add Bookmarks</h3>
-              <p>
-                Fav automatically prefills the page you are on when you go to
-                add a bookmark. If you like to quickly set a bookmark and return
-                to it later, Fav is here for you
-              </p>
-              <h3>Tag and Search Bookmarks</h3>
-              <p>Tag your bookmarks and search for them instantly later</p>
-              <h3>Github Integration</h3>
-              <p>
-                With built in Github integration you can backup, share and
-                collaborate with your bookmarks. Whether sharing a bookmark
-                collection of cool wikipedia articles or a collection of
-                bookmarks for work. Fav is made for every type of situation.
-              </p>
-              <h3>Open Source</h3>
-              <p>Fav is open source and liscensed under the MIT license.</p>
-            </FeatureContainer>
+            <h3>Quickly Add Bookmarks</h3>
+            <p>
+              Fav automatically prefills the page you are on when you go to add
+              a bookmark. If you like to quickly set a bookmark and return to it
+              later, Fav is here for you
+            </p>
+            <h3>Tag and Search Bookmarks</h3>
+            <p>Tag your bookmarks and search for them instantly later</p>
+            <h3>Github Integration</h3>
+            <p>
+              With built in Github integration you can backup, share and
+              collaborate with your bookmarks. Whether sharing a bookmark
+              collection of cool wikipedia articles or a collection of bookmarks
+              for work. Fav is made for every type of situation.
+            </p>
+            <h3>Open Source</h3>
+            <p>Fav is open source and liscensed under the MIT license.</p>
           </Right>
         </Container>
       </OuterContainer>
@@ -73,8 +71,6 @@ const OuterContainer = styled.div`
   justify-content: center;
 `
 
-const Left = styled.div``
-
 const Right = styled.div`
   flex-grow: 1;
   width: 600px;
@@ -88,8 +84,6 @@ const Right = styled.div`
     width: 90%;
   }
 `
-
-const FeatureContainer = styled.div``
 
 const HeaderContainer = styled.div`
   display: flex;
