@@ -9,6 +9,8 @@ import {
   HeaderContainer,
 } from '../components/Containers'
 import Layout from '../components/Layout'
+import CTA from '../components/CTA'
+import { GITHUB_LINK } from '../data'
 
 export default () => {
   const screenshot = useScreenshot()
@@ -19,6 +21,7 @@ export default () => {
         <Container>
           <div>
             <ImageWithBorder fluid={screenshot} />
+            <CTA />
           </div>
           <Right>
             <HeaderContainer>
@@ -49,9 +52,22 @@ export default () => {
           </Right>
         </Container>
       </OuterContainer>
+      <Footer>
+        <a href={GITHUB_LINK}>Source Code</a>
+        <p>
+          Made with &hearts; by <a href="https://glvn.co">Sunny Golovine</a>
+        </p>
+      </Footer>
     </Layout>
   )
 }
+
+const Footer = styled.p`
+  position: absolute;
+  bottom: 3.5em;
+  text-align: center;
+  width: 100%;
+`
 
 const Right = styled.div`
   flex-grow: 1;
