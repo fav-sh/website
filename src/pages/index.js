@@ -1,15 +1,20 @@
 import React from 'react'
-import Image from 'gatsby-image'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 import { useScreenshot } from '../hooks/useScreenshot'
 import { useLogo } from '../hooks/useLogo'
+import { ImageWithBorder, HeaderImage } from '../components/Image'
+import {
+  Container,
+  OuterContainer,
+  HeaderContainer,
+} from '../components/Containers'
+import Layout from '../components/Layout'
 
 export default () => {
   const screenshot = useScreenshot()
   const logo = useLogo()
   return (
-    <>
-      <GlobalStyle />
+    <Layout>
       <OuterContainer>
         <Container>
           <div>
@@ -40,36 +45,13 @@ export default () => {
               for work. Fav is made for every type of situation.
             </p>
             <h3>Open Source</h3>
-            <p>Fav is open source and liscensed under the MIT license.</p>
+            <p>Fav is open source and licensed under the MIT license.</p>
           </Right>
         </Container>
       </OuterContainer>
-    </>
+    </Layout>
   )
 }
-
-const ImageWithBorder = styled(Image)`
-  border-radius: 7.5px;
-  width: 700px;
-  @media (max-width: 700px) {
-    width: 90%;
-  }
-`
-
-const Container = styled.div`
-  margin-top: 100px;
-  display: flex;
-  flex-direction: row;
-  @media (max-width: 1100px) {
-    flex-direction: column;
-  }
-`
-
-const OuterContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`
 
 const Right = styled.div`
   flex-grow: 1;
@@ -82,25 +64,5 @@ const Right = styled.div`
 
   @media (max-width: 700px) {
     width: 90%;
-  }
-`
-
-const HeaderContainer = styled.div`
-  display: flex;
-  @media (max-width: 1100px) {
-    margin-top: 1em;
-  }
-`
-const HeaderImage = styled(Image)`
-  height: 64px;
-  width: 64px;
-`
-
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    background-color: #1E88E5;
-  }
-  h1,h2,h3,h4,h5,h6,a,p {
-    color: #ECEFF1
   }
 `
