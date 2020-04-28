@@ -63,7 +63,6 @@ export default () => {
 }
 
 const Footer = styled.p`
-  position: absolute;
   bottom: 3.5em;
   text-align: center;
   width: 100%;

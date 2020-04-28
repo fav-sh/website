@@ -11,8 +11,12 @@ export const Container = styled.div`
 
 export const OuterContainer = styled.div`
   width: 100%;
+  height: 90vh;
   display: flex;
   justify-content: center;
+  @media (max-width: 1100px) {
+    height: 100vh;
+  }
 `
 
 export const HeaderContainer = styled.div`
