@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/fav-sh/website#readme",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
+    "babel-plugin-styled-components": "^2.0.0",
     "gatsby": "^2.21.0",
     "gatsby-image": "^2.4.0",
     "gatsby-plugin-sharp": "^2.6.0",
